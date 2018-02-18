@@ -1,0 +1,32 @@
+
+h1{
+	color: dimgray;
+	font-weight: normal;
+	
+}
+
+h3{
+	color: dimgray;
+	
+}
+
+a{
+	text-decoration: none;
+
+}
+
+a:hover{
+	text-decoration: none;
+
+}
+
+div.header
+{
+	background-color: cornsilk;
+	text-align: center;
+}
+
+small{
+	color:gray;
+}
+
