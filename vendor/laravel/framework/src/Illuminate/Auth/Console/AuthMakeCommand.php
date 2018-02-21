@@ -35,7 +35,7 @@ class AuthMakeCommand extends Command
         'auth/register.stub' => 'auth/register.blade.php',
         'auth/passwords/email.stub' => 'auth/passwords/email.blade.php',
         'auth/passwords/reset.stub' => 'auth/passwords/reset.blade.php',
-        'layouts/app.stub' => 'layouts/app.blade.php',
+        'Layouts/app.stub' => 'Layouts/app.blade.php',
         'home.stub' => 'home.blade.php',
     ];
 
@@ -73,7 +73,7 @@ class AuthMakeCommand extends Command
      */
     protected function createDirectories()
     {
-        if (! is_dir($directory = resource_path('views/layouts'))) {
+        if (! is_dir($directory = resource_path('views/Layouts'))) {
             mkdir($directory, 0755, true);
         }
 

@@ -59,7 +59,7 @@
         <div id="comments" class="collapse jumbotron">
             <br>
             <form method="POST" action="{{route('comments.store')}}">
-                @csrf
+                {{ csrf_field() }}
                 <div class="form-group">
                     <textarea name="comment_body" class="form-control" placeholder="Your Comment Here..."/></textarea>
                 </div>
@@ -87,7 +87,7 @@
                         @if((Auth::user()->id==$post->user_id)||(Auth::user()->id==$comment->user_id))
                         <form method="POST" action="{{ route('comments.destroy',$comment->id) }}" style="display:inline-block">
                             @method('delete')
-                            @csrf
+                            {{ csrf_field() }}
                             <input type="submit" class="btn btn-danger" value="Delete">
                         </form>
                         @endif
@@ -123,7 +123,7 @@
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                       <form method="POST" action="{{ route('posts.destroy',$post->id) }}" style="display:inline-block">
                             @method('delete')
-                            @csrf
+                            {{ csrf_field() }}
                             <input type="submit" class="btn btn-danger" value="Delete">
                         </form>
                     </div>
