@@ -86,7 +86,7 @@
                     @if(!Auth::guest())
                         @if((Auth::user()->id==$post->user_id)||(Auth::user()->id==$comment->user_id))
                         <form method="POST" action="{{ route('comments.destroy',$comment->id) }}" style="display:inline-block">
-                            @method('delete')
+                            {{ method_field('DELETE') }}
                             {{ csrf_field() }}
                             <input type="submit" class="btn btn-danger" value="Delete">
                         </form>
@@ -122,7 +122,7 @@
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                       <form method="POST" action="{{ route('posts.destroy',$post->id) }}" style="display:inline-block">
-                            @method('delete')
+                            {{ method_field('DELETE') }}
                             {{ csrf_field() }}
                             <input type="submit" class="btn btn-danger" value="Delete">
                         </form>

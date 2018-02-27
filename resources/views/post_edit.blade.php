@@ -7,7 +7,7 @@
 
     <form action="{{ route('posts.update', $post->id) }}" method="POST" enctype="multipart/form-data">
            {{ csrf_field() }}
-           @method('put')
+           {{ method_field('PUT') }}
            <div class="form-group">
                 <label>Title</label>
                 <input type="text" id="title" name="title" class="form-control" value="{{$post->title}}"/>
